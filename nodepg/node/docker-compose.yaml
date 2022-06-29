@@ -10,7 +10,7 @@ services:
           - 5432:5432
         volumes: 
           # copy the sql script to create tables
-          - ./scripts/full.sql:/docker-entrypoint-initdb.d/full.sql          
+          - ./scripts:/docker-entrypoint-initdb.d          
     web-node:
         build: .
         ports:
