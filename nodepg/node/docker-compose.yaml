@@ -1,11 +1,11 @@
 version: '3.7'
 services:
     dbpg:
-        image: postgres
+        image: mysql
         restart: always
         environment:
-          - POSTGRES_USER=postgres
-          - POSTGRES_PASSWORD=postgres
+          - MYSQL_USER=sql_user
+          - MYSQL_ALLOW_EMPTY_PASSWORD=true
         ports:
           - 5432:5432
         volumes: 

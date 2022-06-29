@@ -3,6 +3,8 @@
 const express = require('express');
 const Pool = require('pg').Pool
 const pool = new Pool()
+
+
 const getUserById = (request, response) =>{
     const id = parseInt(request.params.id);
     pool.query("SELECT * from users WHERE id = $1", [id], (error, result)=> {

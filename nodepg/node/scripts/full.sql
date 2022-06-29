@@ -1,5 +1,5 @@
 CREATE DATABASE pa;
-\c pa
+USE pa
 CREATE TABLE users(
     ID SERIAL PRIMARY KEY,
     name VARCHAR(30),
